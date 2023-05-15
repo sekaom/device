@@ -6,3 +6,6 @@
 #
 
 LOCAL_PATH := device/lenovo/X504F
+
+# Device is a Tablet
+PRODUCT_CHARACTERISTICS := tablet
