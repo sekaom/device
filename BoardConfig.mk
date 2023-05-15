@@ -26,7 +26,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := generic
 OVERRIDE_TARGET_FLATTEN_APEX := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := LenovoTB-X504F
+TARGET_BOOTLOADER_BOARD_NAME := msm8937
 TARGET_NO_BOOTLOADER := true
 
 # Display
@@ -35,13 +35,14 @@ TARGET_SCREEN_DENSITY := 160
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78B0000 g_android.luns=1 g_android.removable=1 g_android.cdrom=1 buildvariant=user
+#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
-BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_CONFIG := X504F_defconfig
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+TARGET_KERNEL_CONFIG := lineageos_tbx304_defconfig
 TARGET_KERNEL_SOURCE := kernel/lenovo/msm8917
 
 # Partitions
@@ -57,4 +58,3 @@ TARGET_BOARD_PLATFORM := msm8937
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
