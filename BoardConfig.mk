@@ -8,7 +8,7 @@
 DEVICE_PATH := device/lenovo/X504F
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := TB-8504X,TB-8504F,tb-8504x,tb-8504f,tb_8504
+TARGET_OTA_ASSERT_DEVICE := X504F, x504f, TBX504F, tbx504f, TB-X504F, tb-x504f
 
 # Architecture
 TARGET_ARCH := arm64
