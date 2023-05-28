@@ -10,6 +10,16 @@ LOCAL_PATH := device/lenovo/X504F
 # Device is a Tablet
 PRODUCT_CHARACTERISTICS := tablet
 
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service \
+    android.hardware.audio@4.0 \
+    android.hardware.audio@5.0-impl \
+    android.hardware.audio@6.0-impl:32 \
+    android.hardware.audio.common@4.0 \
+    android.hardware.audio.common@4.0-util \
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
