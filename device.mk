@@ -20,6 +20,10 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.common@4.0 \
     android.hardware.audio.common@4.0-util \
 
+# Configstore
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.1-service
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
